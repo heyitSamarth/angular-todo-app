@@ -1,0 +1,13 @@
+<div class="containerb m-auto">
+    <form (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" [(ngModel)]="title" required="true" class="form-control" id="title" name="title" required="true" >
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <input type="string" [(ngModel)]="description"  class="form-control" id="description" name="description" required="true">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
