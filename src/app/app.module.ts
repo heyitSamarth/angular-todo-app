@@ -9,6 +9,9 @@ import { AddTodoComponent } from './components/add-todo/add-todo.component';
 import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
+import { AuthServiceService } from './service/auth-service.service';
+import { AuthGuardServiceService } from './service/gaurds/auth-guard-service.service';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,14 +21,15 @@ import { LoginComponent } from './components/login/login.component';
     TodoItemsComponent,
     AddTodoComponent,
     AboutComponent,
-    LoginComponent
+    LoginComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AuthServiceService,AuthGuardServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
